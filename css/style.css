@@ -19,6 +19,7 @@ body {
 
 li {
     list-style: none;
+    
 }
 
 a {
@@ -194,6 +195,7 @@ p {
         ". . character";
     grid-area: hero;
     padding: 0rem;
+   
 }
 
 .main-story  {
@@ -220,9 +222,11 @@ p {
     grid-area: character;
     display: inline-flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-self: end;
     padding: 0rem 0rem 0rem 2rem;
     gap: 0px 0px 30px;
+    grid-row: 2 / span 2;
 
 }
 
@@ -284,6 +288,10 @@ p {
     text-align: center;
 
 }
+.container-footer li {
+    padding: .5rem;
+}
+
 /* start with media queries */
 /* media queries for menu responsiveness */
 

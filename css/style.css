@@ -195,7 +195,7 @@ p {
     border-style: solid;
     border-radius: 1rem;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
-    border: magenta 4px solid;
+    border: magenta 0px solid;
    
 
 }
@@ -356,7 +356,7 @@ p {
         grid-area: articles;
         background-color: #282828;
     }
-} .main-story {
+ .main-story {
         grid-area: main-story;
         width: 40rem;
         background-color: #2e2e2e;
@@ -371,9 +371,10 @@ p {
     .hero {
         grid-area: hero;
         background-image: none;
-        display: none;
+        display:none;
+        
     }
-
+}
 /* 2. tablet devices */
 @media screen and (min-width : 481px) and (max-width : 768px) {
     body {
@@ -469,6 +470,6 @@ p {
 @media screen and (min-width : 1284px) {
     body {
         background-color: #282828;
-        ;
+        
     }
 }}

@@ -371,6 +371,7 @@ p {
     .hero {
         grid-area: hero;
         background-image: none;
+        display: none;
     }
 
 /* 2. tablet devices */

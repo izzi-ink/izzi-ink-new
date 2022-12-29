@@ -13,7 +13,7 @@
     --plum: #291f29;
     --hotmag: #e96176;
     --magenta: #f35f75;
-    --sky:#47A8CA;
+    --sky:#55BAD6;
     --sand: #D7CCC8;
     --kalahari: #DAA994;
     --white: #f7f8fa;
@@ -79,26 +79,34 @@ body {
 }
 
 nav {
-    background-color: var(--black);
-    padding: 1rem;
-    display: flex;
+    display:flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    border: #e96176 0px solid;
+    background-color: var(--black);
+    padding: 0 0 0 0;
     align-items: center;
     margin-bottom: 1rem;
 }
 ul {
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 li {
-    padding: 0 1rem;
+    border: #e96176 0px solid;
+    padding: 1rem;
+    margin: 0;
 }
 
 nav a {
-    color: white;
+    color: var(--sand);
     text-decoration: none;
     display: block;
     font-family: 'Inter' sans-serif;
@@ -107,10 +115,10 @@ nav a {
     font-size: 16px;
 }
 
-nav a:hover,
-nav :hover {
+nav a:hover {
     color: var(--white);
 }
+
 
 .wrapper {
     justify-content: center;
@@ -122,17 +130,19 @@ nav :hover {
     border:  var(--white) 2px solid;
     color: var(--white);
     background-color:var(--black);
-    padding: 16px;
+    padding: 24px;
     border-radius: 16px;
     position: relative;
     width: 312px;
     height: 367px;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
   }
 
   .card img {
     position: absolute;
     right: 48px;
     bottom: -232px; /* Adjust this value to control the overlap */
+    
     z-index: 1;
   }
   .card p {

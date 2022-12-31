@@ -274,19 +274,19 @@ p {
 }
 .container-footer {
    
+    border: #fec224 0px solid;
     grid-area: footer;
     border-top: #6f6f6f .125rem dashed;
     background-color: #282828;
     color: #ffffff;
     font-size: 1rem;
-    margin-top: 10rem;
     padding: 3rem;
     text-align: center;
 
 }
 
 .container-footer a {
-    border: pink 2px solid;
+    border: pink 0px solid;
     color: #ffffff;
     text-decoration: none;
 }
@@ -299,11 +299,13 @@ p {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    border-top: 0;
     justify-content: center;
     align-items: center;
     
 }
 .container-footer ul li {
+    border: pink 0px solid;
     margin: 0 1rem;
     padding: .5rem;
 }
@@ -387,7 +389,7 @@ p {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 2fr;
-        gap: 0px 0px;
+        gap: 0px 0px 0px;
         grid-template-areas:
             "header header header"
             "hero hero hero"
@@ -599,17 +601,7 @@ p {
         grid-area: articles;
         background-color: #282828;
     }
-    /* .hero {
-       
-        grid-area: hero;
-        background-color: var(--namib);
-        align-content: center;
-        right: 567px;
-        background-image: none;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    } */
+   
 }
 
 /* 4. large screens and desktops */

@@ -113,14 +113,13 @@ p {
 .container {
     border: magenta 0px solid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.3fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2.5fr 0.3fr;
     gap: 0px 0px;
     grid-template-areas:
-        "header header header"
-        "hero hero hero"
-        "articles articles articles"
-        "footer footer footer";
+        "header"
+        "hero"
+        "footer";
 }
 
 .header {
@@ -195,13 +194,13 @@ p {
     background-color: #FFFFFF;
     border: magenta 0px solid;
     display: grid;
-    grid-template-columns: 0.2fr 1.3fr 1.5fr;
-    grid-template-rows: 0.4fr 2.1fr 0.5fr;
-    gap: 0px 0px;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.3fr 2fr 0.7fr;
+    gap: 0px 0px 16px 0px;
     grid-template-areas:
         ". . ."
-        ". main-story character"
-        ". . character";
+        ". main-story ."
+        ". . .";
     grid-area: hero;
     padding: 0rem;
 }
@@ -209,7 +208,7 @@ p {
 .main-story  {
     grid-area: main-story;
     justify-content: space-between;
-    width: 40rem;
+    width: auto;
     background-color: #2e2e2e;
     padding: 2rem 2rem 2rem 2rem;
     margin: -1rem;
@@ -218,60 +217,35 @@ p {
     border-radius: 1rem;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     border: magenta 0px solid;
-   
 
 }
 
-.character {
+.main-story h1 {
     border: magenta 0px solid;
-    grid-area: character;
-    /* align-self: flex-end; */
-
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 1rem;
 }
-
-/* at smaller screens this must perhaps be flex */
-.articles {
+.main-story h2 {
     border: magenta 0px solid;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "doodles drawings books"
-        "doodles drawings books"
-        "doodles drawings books"
-        "footer footer footer";
-    grid-area: articles;
-    background-color: #282828;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 1rem;
 }
 
-.doodles {
+.main-story p {
     border: magenta 0px solid;
-    border-radius: 0 0 1.5rem 0;
-    background-color: #282828;
-    grid-area: doodles;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 1rem;
 }
 
-.drawings {
-    border: magenta 4x solid;
-    background-color: #282828;
-    grid-area: drawings;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
 
-.books {
-    border: magenta 4x solid;
-    background-color: #282828;
-    grid-area: books;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
+
+
 .container-footer {
    
     border: #fec224 0px solid;
@@ -358,7 +332,7 @@ p {
 
     .hero {
         grid-area: hero;
-        background-color: #ffffff;
+        background-color: #562cc2;
         display: flex;
         flex-direction: column;
         background-image: none;
@@ -419,32 +393,33 @@ p {
         
     }
     
-.main-story h1 {
-        font-size: 3rem;
-        color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-
-    .main-story h2 {
+    .main-story h1 {
+        border: magenta 0px solid;
         font-size: 2rem;
+        font-weight: 500;
         color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
+        padding-bottom: 1rem;
     }
+    .main-story h2 {
+        border: magenta 0px solid;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        padding-bottom: 1rem;
+    }
+    
     .main-story p {
+        border: magenta 0px solid;
         font-size: 1rem;
+        font-weight: 500;
         color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
+        padding-bottom: 1rem;
     }
+    
 
     .hero {
         grid-area: hero;
-        background-color: white;
+        background-color: var(--sky);
         background-image: none;
         display: flex;
         flex-direction: column;
@@ -494,33 +469,36 @@ p {
         box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     }
     
-.main-story h1 {
-        font-size: 3rem;
-        color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-
-    .main-story h2 {
+    .main-story h1 {
+        border: magenta 0px solid;
         font-size: 2rem;
+        font-weight: 500;
         color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
+        padding-bottom: 1rem;
     }
+    .main-story h2 {
+        border: magenta 0px solid;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        padding-bottom: 1rem;
+    }
+    
     .main-story p {
+        border: magenta 0px solid;
         font-size: 1rem;
+        font-weight: 500;
         color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
+        padding-bottom: 1rem;
     }
+    
+
+
 
     .hero {
         grid-area: hero;
         border: aliceblue 0px solid;
-        background-color: white;
+        background-color: var(--darkrain);
         background-image: none;
         display: flex;
         flex-direction: column;
@@ -572,27 +550,28 @@ p {
     }
 
     .main-story h1 {
-        font-size: 3rem;
-        
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-
-    .main-story h2 {
+        border: magenta 0px solid;
         font-size: 2rem;
-        
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-    .main-story p {
-        font-size: 1rem;
+        font-weight: 500;
         color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
+        padding-bottom: 1rem;
     }
+    .main-story h2 {
+        border: magenta 0px solid;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        padding-bottom: 1rem;
+    }
+    
+    .main-story p {
+        border: magenta 0px solid;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #ffffff;
+        padding-bottom: 1rem;
+    }
+    
 
     .articles {
         display: flex;

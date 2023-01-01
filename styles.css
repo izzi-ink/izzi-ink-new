@@ -33,6 +33,10 @@
     transition: all ease-in-out 250ms;
 }
 
+/* *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+
 body {
     background-color: #282828;
     border: magenta 0px solid;
@@ -58,9 +62,10 @@ h1 {
     font-weight: bold;
     font-size: 4rem;
     line-height: 4rem;
+    margin-bottom: 0;
     /* identical to box height, or 81% */
     color: #D7CCC8;
-    padding-left: 2rem;
+    
 
 }
 
@@ -74,13 +79,12 @@ h2 {
     font-weight: bold;
     font-size: 2rem;
     line-height: 3rem;
+    margin-bottom: 0;
     color: #D7CCC8;
 
-    padding-left: 2rem;
+    
 
     /* identical to box height, or 112% */
-
-
 
 }
 
@@ -106,27 +110,38 @@ p {
     font-size: 1rem;
     line-height: 1.5rem;
     color: #FFFFFF;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    
 }
 
+
+/* MAIN GRID STARTS HERE */
 .container {
     border: magenta 0px solid;
+    /* main container takes up 100% of the viewport height */
+    height: 100vh;
+    /* bg color for testing uncomment to test */
+    /* background-color: cyan; */
+    /* turn the grid on */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.3fr;
+    /* set the number of columns and rows */
+    grid-template-rows: 6rem 32rem 1fr 1fr;
+    grid-column: 1fr 1 fr 1fr 1fr;
+    /* set the gap between the rows and columns */
     gap: 0px 0px;
+    padding: 0;
+    /* set the grid areas */
     grid-template-areas:
-        "header header header"
-        "hero hero hero"
-        "articles articles articles"
-        "footer footer footer";
+        "header "
+        "hero"
+        "portfolio"
+        "footer";
+
 }
 
 .header {
     border: magenta 0px dashed;
     grid-area: header;
-    box-shadow: 0px 0.525rem 0.25rem rgba(0, 0, 0, 0.25);
+    padding: 0 0 0 0;
 }
 
 .navbar {
@@ -137,9 +152,9 @@ p {
     background-color: #282828;
     padding: 1rem 1.5rem;
    
-
 }
 
+/* Here it will not display, but later we switch it on */
 .hamburger {
     display: none;
 }
@@ -171,10 +186,10 @@ p {
     border: magenta 0px solid;
     font-weight: 600;
     font-size: 1rem;
-    /* font-size: 1.6rem;
-    font-weight: 400; */
+    font-weight: 400;
     color: #ffffff;
     padding-right: 2rem;
+    padding-bottom: 0;
 }
 
 .nav-link:hover {
@@ -190,89 +205,127 @@ p {
 }
 
 
-
+/* This is the hero container */
 .hero {
-    background-color: #FFFFFF;
-    border: magenta 0px solid;
+ /* Turn the grid on  */
     display: grid;
-    grid-template-columns: 0.2fr 1.3fr 1.5fr;
-    grid-template-rows: 0.4fr 2.1fr 0.5fr;
-    gap: 0px 0px;
+    /* Set the number of columns and rows */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 32rem;
+    /* Set the gap between the columns and rows */
+    gap: 0 4rem;
+
+    /* Set the grid area */
     grid-template-areas:
-        ". . ."
-        ". main-story character"
-        ". . character";
-    grid-area: hero;
-    padding: 0rem;
+        "intro main-character";
+    /* Set the background color of the grid */
+    background-color: #ffffff;
+    /* Set the margin of the grid */
+    margin: 0;
+    /* Set the border of the grid */
+    border: magenta 0px solid;
+    /* Set the border radius of the grid */
+    border-radius: 0rem;
+    /* Set the width of the grid */
+    width: 100%;
+    /* Set the padding overall of the grid */
+    padding: 0;
+
 }
 
-.main-story  {
-    grid-area: main-story;
-    justify-content: space-between;
-    width: 40rem;
+.card-hero-main h1 h2 p {
+    
+    /* The Typography can be added here */
+     border: magenta 0px solid;
+     text-align: left;
+     margin-bottom: 0;
+     background-color: #282828;
+    
+ }
+
+ /* The intro card now goes inside the intro area of the hero area */
+ 
+ #intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
     background-color: #2e2e2e;
-    padding: 2rem 2rem 2rem 2rem;
-    margin: -1rem;
+    width: 90%;
+    padding: 0 0 0 2rem;
+    margin: 4rem 4rem;
     border-color: #ffffff;
     border-style: solid;
     border-radius: 1rem;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
-    border: magenta 0px solid;
-   
-
 }
 
-.character {
+#main-character {
+    grid-area: main-character;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
     border: magenta 0px solid;
-    grid-area: character;
-    /* align-self: flex-end; */
 
 }
+/* Portfolio of Services start here */
 
-/* at smaller screens this must perhaps be flex */
-.articles {
+
+/* Main Container for portfolio cards here */
+.portfolio {
+    background-color: #2e2e2e;
     border: magenta 0px solid;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
-        "doodles drawings books"
-        "doodles drawings books"
-        "doodles drawings books"
-        "footer footer footer";
-    grid-area: articles;
-    background-color: #282828;
+        "c1 c2 c3"; 
+    padding: 0;
 }
 
-.doodles {
-    border: magenta 0px solid;
-    border-radius: 0 0 1.5rem 0;
-    background-color: #282828;
-    grid-area: doodles;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
+/* Card Styling here */
 
-.drawings {
-    border: magenta 4x solid;
-    background-color: #282828;
-    grid-area: drawings;
+.card {
+    border: rgb(255, 255, 255) 2px solid;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-}
+    justify-content: center;
+    align-items: start;
+    background-color: #403F3F;
+    padding: 0rem 2rem 2rem 2rem;
+    margin: 4rem 4rem 4rem 4rem;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+      }
+  
+  
+  .caption {
+    
+    color: #D7CCC8;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 52px;
+    margin-bottom: 0;
+  }
+  
+  .text {
+    
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 1rem;
 
-.books {
-    border: magenta 4x solid;
-    background-color: #282828;
-    grid-area: books;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
-.container-footer {
+  }
+
+  .container-footer {
    
     border: #fec224 0px solid;
     grid-area: footer;
@@ -312,10 +365,9 @@ p {
 
 
 /* start with media queries */
-
 /* media queries for menu responsiveness */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -337,6 +389,7 @@ p {
         margin: 2.5rem 0;
     }
 
+/* Now the hamburger menu must be shown */
     .hamburger {
         display: block;
         cursor: pointer;
@@ -356,129 +409,139 @@ p {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+.container {
+    display: grid;
+    grid-template-columns: 1 fr 1fr 1 fr 1fr ;
+    grid-template-rows: 6rem 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        ". . hero ."
+        ". portfolio . "
+        "footer footer footer";
+
+}
+
+
     .hero {
-        grid-area: hero;
+        display: flex;
+        grid-template-areas:
+            "intro"
+            "main-character";
+        flex-direction: column;
+        /* Set the background color of the grid */
         background-color: #ffffff;
+        /* Set the margin of the grid */
+        margin: 0;
+        /* Set the border of the grid */
+        border: magenta 0px solid;
+        /* Set the border radius of the grid */
+        border-radius: 0rem;
+        /* Set the width of the grid */
+        width: 100%;
+        /* Set the padding overall of the grid */
+        padding: 0;
+
+    }
+
+    #intro {
+        grid-area: intro;
         display: flex;
         flex-direction: column;
-        background-image: none;
+        justify-content: center;
+        background-color: #2e2e2e;
+        width: 90%;
+        padding: 0 2rem 0 2rem;
+        margin: 4rem 0 4rem 4rem;
+        border-color: #ffffff;
+        border-style: solid;
+        border-radius: 1rem;
+        box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    #main-character {
+        grid-area: main-character;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "header header header"
-            "hero hero hero"
-            "articles articles articles"
-            "footer footer footer";
-
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #2e2e2e;
+        border: magenta 0px solid;
+        padding: 0;
     }
+
 }
 
 /* 1. mobile devices */
 @media screen and (min-width : 320px) and (max-width : 480px) {
     body {
-        background-color: #282828;
+        background-color: red;
 
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr;
-        gap: 0px 0px 0px;
-        grid-template-areas:
-            "header header header"
-            "hero hero hero"
-            "articles articles articles"
-            "footer footer footer";
-
-    }
-
-    .articles {
-        display: flex;
-        flex-direction: column;
-        grid-area: articles;
-        background-color: #282828;
-    }
-    .main-story {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-area: main-story;
-        width: 100%;
-        background-color: #2e2e2e;
-        padding: 0 2rem 2rem 0.5rem;
-        margin: 0rem;
-        border-color: #ffffff;
-        border-style: solid;
-        border-radius: 0rem;
-        
-    }
+        #intro { 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-area: main-story;
+            width: 100%;
+            background-color: #2e2e2e;
+            padding: 0 2rem 2rem 0.5rem;
+            margin: 0rem;
+            border-color: #ffffff;
+            border-style: solid;
+            border-radius: 0rem;
+        }
+        #intro h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: left;
+        }
     
-.main-story h1 {
-        font-size: 3rem;
-        color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
+        #intro h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        #intro p {
+            font-size: 1rem;
+            color: #ffffff;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: left;
+        }
+    
+        .hero {
+            grid-area: hero;
+            background-color: white;
+            background-image: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
 
-    .main-story h2 {
-        font-size: 2rem;
-        color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-    .main-story p {
-        font-size: 1rem;
-        color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-
-    .hero {
-        grid-area: hero;
-        background-color: white;
-        background-image: none;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+    
+   
 }
 /* 2. tablet devices */
 @media screen and (min-width : 481px) and (max-width : 768px) {
     body {
-        background-color: #282828;
+        background-color: #2e2e2e;
 
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "header header header"
-            "hero hero hero"
-            "articles articles articles"
-            "footer footer footer";
-
-    }
-
-    .articles {
-        display: flex;
-        flex-direction: column;
-
-        grid-area: articles;
-        background-color: #282828;
-    }
-    .main-story {
+    #intro {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -494,7 +557,7 @@ p {
         box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     }
     
-.main-story h1 {
+    #intro h1 {
         font-size: 3rem;
         color: #ffffff;
         margin: 0;
@@ -502,14 +565,14 @@ p {
         text-align: left;
     }
 
-    .main-story h2 {
+    #intro h2 {
         font-size: 2rem;
         color: #ffffff;
         margin: 0;
         padding: 0.5rem;
         text-align: left;
     }
-    .main-story p {
+    #intro p {
         font-size: 1rem;
         color: #ffffff;
         margin: 0;
@@ -528,96 +591,30 @@ p {
         justify-content: center;
         flex-wrap: wrap;
     }
-    .character {
-        border: magenta 0px solid;
-        grid-area: character;
-        align-content: center;
-    
-    }
-
 }
 
-/* 3. small screens and laptops */
-@media screen and (min-width : 768px) and (max-width : 1024px) {
+/* 3. small desktop screens and laptops */
+@media screen and (min-width : 769px) and (max-width : 1024px) {
     body {
         background-color: #282828;
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "header header header"
-            "hero hero hero"
-            "articles articles articles"
-            "footer footer footer";
+    
 
-    }
-
-    .main-story {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        grid-area: main-story;
-        width: 100%;
-        background-color: var(--badger);
-        padding: 0 2rem 2rem 0.5rem;
-        margin: 0rem;
-        border-color: #ffffff;
-        border-style: solid;
-       
-        box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    .main-story h1 {
-        font-size: 3rem;
-        
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-
-    .main-story h2 {
-        font-size: 2rem;
-        
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-    .main-story p {
-        font-size: 1rem;
-        color: #ffffff;
-        margin: 0;
-        padding: 0.5rem;
-        text-align: left;
-    }
-
-    .articles {
-        display: flex;
-        flex-direction: column;
-
-        grid-area: articles;
-        background-color: #282828;
-    }
-   
 }
 
 /* 4. large screens and desktops */
 @media screen and (min-width : 1024px) {
     body {
-      
-        
-        background-color: #282828;
-        
-        
+             
+        background-color: black;
+         
 }
 
 /* 5. extra large screens and televisions */
 @media screen and (min-width : 1284px) {
     body {
-        background-color: #282828;
+        background-color: white;
         
     }
 }}

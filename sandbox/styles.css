@@ -1,0 +1,484 @@
+/* Basic Aesthetic Styling */
+:root {
+    --badger: #282828;
+    --crown:#c0c0c0;
+    --ranger: #635d58;
+    --honey: #fec224;
+    --pleasure: #e96176;
+    --passion: #f35f75;
+    --gem:#562cc2;
+    --indigo:#3d50b5;
+    --dusk: #5C6BC0;
+    --sky:#47A8CA;
+    --darkrain: #2D6072;
+    --rain: #317B9A;
+    --sand: #D7CCC8;
+    --kalahari: #DAA994;
+    --skinwalker:#f2bba4;
+   --freshdune:#F3D2B5;
+    --namib:#b44512;
+    --white: #f7f8fa;
+    --black: #000000;
+    --font-size: 1.3rem;
+    --sans: "Inter", sans-serif;
+   
+}
+
+/* Basic Aesthetic Styling */
+/* Main CSS for Izzi Ink */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    background-color: #282828;
+    border: magenta 0px solid;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #F2E9C2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    /* hero xl */
+    text-align: start;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 0;
+    /* identical to box height, or 81% */
+    color: #D7CCC8;
+    
+
+}
+
+h2 {
+    /* hero xl */
+    /* h2 / xl */
+
+    text-align: left;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 0;
+    color: #D7CCC8;
+
+    
+
+    /* identical to box height, or 112% */
+
+}
+
+h3 {
+    /* hero xl */
+    /* h2 / xl */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    /* identical to box height, or 112% */
+}
+
+p {
+
+    display: inline-block;
+    text-align: left;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    
+    /* NOT SURE ABOUT BELOW */
+    /* padding-left: 2rem; 
+    padding-right: 2rem; */
+}
+
+footer img {
+
+    padding: 1rem;
+    
+    /* NOT SURE ABOUT BELOW */
+    /* padding-left: 2rem; 
+    padding-right: 2rem; */
+}
+
+/* MAIN GRID STARTS HERE */
+.container {
+    border: magenta 0px solid;
+    /* main container takes up 100% of the viewport height */
+    height: 100vh;
+    /* bg color for testing uncomment to test */
+    /* background-color: cyan; */
+    /* turn the grid on */
+    display: grid;
+    /* set the number of columns and rows */
+    grid-template-rows: 6rem 32rem 1fr 1fr;
+    grid-column: 1fr;
+    /* set the gap between the rows and columns */
+    gap: 0px 0px;
+    padding: 0;
+    /* set the grid areas */
+    grid-template-areas:
+        "header"
+        "hero"
+        "portfolio"
+        "footer";
+
+}
+
+.header {
+    border: magenta 0px dashed;
+    grid-area: header;
+    padding: 0 0 0 0;
+}
+
+.navbar {
+    border: rgb(255, 217, 0) 0px dashed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    padding: 1rem 1.5rem;
+   
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    border: magenta 0px solid;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    border: magenta 0px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    border: magenta 0px solid;
+    margin-left: 5rem;
+}
+
+.nav-link {
+    border: magenta 0px solid;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #ffffff;
+    padding-right: 2rem;
+    padding-bottom: 0;
+}
+
+.nav-link:hover {
+    border: magenta 0px solid;
+    color: #F2E9C2;
+}
+
+.nav-logo {
+    border: magenta 0px solid;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+/* This is the hero container */
+.hero {
+ /* Turn the grid on  */
+ display: grid;
+    /* Set the number of columns and rows */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 32rem;
+    /* Set the gap between the columns and rows */
+    gap: 0 4rem;
+
+    /* Set the grid area */
+    grid-template-areas:
+        "intro main-character";
+    /* Set the background color of the grid */
+    background-color: #ffffff;
+    /* Set the margin of the grid */
+    margin: 0;
+    /* Set the border of the grid */
+    border: magenta 0px solid;
+    /* Set the border radius of the grid */
+    border-radius: 0rem;
+    /* Set the width of the grid */
+    width: 100%;
+    /* Set the padding overall of the grid */
+    padding: 0;
+
+}
+
+#intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    background-color: #2e2e2e;
+    width: 90%;
+    padding: 0 0 0 2rem;
+    margin: 4rem 4rem;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+#main-character {
+    grid-area: main-character;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+/* The intro card now goes inside the intro area of the hero area */
+
+.card-hero-main h1 h2 p {
+    
+   /* The Typography can be added here */
+    border: magenta 0px solid;
+    text-align: left;
+    margin-bottom: 0;
+   
+}
+/* Portfolio of Services start here */
+
+
+/* Main Container for portfolio cards here */
+.portfolio {
+    background-color: #2e2e2e;
+    border: magenta 0px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "c1 c2 c3"; 
+    padding: 0;
+}
+
+/* Card Styling here */
+
+.card {
+    border: rgb(255, 255, 255) 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #403F3F;
+    padding: 0rem 2rem 2rem 2rem;
+    margin: 4rem 4rem 4rem 4rem;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+      }
+  
+  
+  .caption {
+    
+    color: #D7CCC8;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 52px;
+    margin-bottom: 0;
+  }
+  
+  .text {
+    
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+
+  }
+
+.footer {
+   
+    border: #fec224 0px solid;
+    grid-area: footer;
+    border-top: #6f6f6f .125rem dashed;
+    background-color: #282828;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 3rem;
+    text-align: center;
+
+}
+
+.container-footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 0;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-footer ul li {
+    border: pink 1px solid;
+    margin: 0 1rem;
+    padding: .5rem;
+}
+
+
+/* start with media queries */
+/* media queries for menu responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        background-color: #2e2e2e;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0px 0.5rem 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* inside the Media Query. */
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero {
+        grid-area: "intro main-character";
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "portfolio portfolio portfolio"
+            "footer footer footer";
+
+    }
+
+}
+
+/* 1. mobile devices */
+@media screen and (min-width : 320px) and (max-width : 480px) {
+    body {
+        background-color: red;
+
+    }
+
+ 
+   
+}
+/* 2. tablet devices */
+@media screen and (min-width : 481px) and (max-width : 768px) {
+    body {
+        background-color: green;
+
+    }
+
+    
+}
+
+/* 3. small desktop screens and laptops */
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+    body {
+        background-color: blue;
+    }
+
+    
+
+   
+
+   
+   /* This is the hero container */
+
+     
+
+
+}
+
+/* 4. large screens and desktops */
+@media screen and (min-width : 1024px) {
+    body {
+      
+        
+        background-color: black;
+         
+}
+
+/* 5. extra large screens and televisions */
+@media screen and (min-width : 1284px) {
+    body {
+        background-color: white;
+        
+    }
+}}

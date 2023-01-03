@@ -1,3 +1,4 @@
+console.log("Hello I am seen in the console");
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 

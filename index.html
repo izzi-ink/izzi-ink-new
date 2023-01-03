@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
-    <title>Izzi Ink Home of Emerald and Houtvollop Media</title>
+    <title>Emerald Ink</title>
 </head>
 
 <body>
@@ -16,17 +16,17 @@
     <div class="container">
         <header class="header">
             <nav class="navbar">
-                <a href="./index.html" class="nav-logo"><img src="./img/logo.svg"
-                        alt="Link back home and black and white hexagonal logo for the Izzi Ink Brand"></a>
+                <a href="#" class="nav-logo"><img src="./img/logo.svg"
+                        alt="Logo for the Izzi Ink Brand"></a>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="./about/about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./portfolio/portfolio.html" class="nav-link">Services</a>
+                        <a href="#about" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./contact/contact.html" class="nav-link">Contact Us</a>
+                        <a href="#contact" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
                 <!-- icon burger bar -->
@@ -52,15 +52,15 @@
             </div>
             <div class="character">
                 <!-- character drawing goes here -->
-                <img src="./img/hero-character_default.svg" alt="Izmargad The Badger">
+                <img src="img/hero-character_default.svg" alt="Izmargad The Badger">
             </div>
         </div>
         <!-- this should be handled as a flex container so it collapses vertically at small screen res -->
-        <div class="articles">
+        <div class="articles" id="a">
             <div class="doodles">
                 <h2>Doodles Matter</h2>
                 <p>
-                    Simpler is always better. If we can understand an idea on a paper napkin, we can certainly figure it out in code.
+                    Simpler is often better. If we can understand an idea on a paper napkin, we can certainly figure it out in code.
                     Doodles don't cost anything, so we use them to explore and experiment.
                 </p>
             </div>
@@ -82,8 +82,18 @@
 
         </div>
         <!-- footer -->
-        <div class="footer">
+        <div class="container-footer" id="contact">
+     
             <footer>
+                <ul class="container-footer ul">
+                  
+                    <li>
+                        <a href="https://github.com/izzi-ink" target="_blank"><img src="./img/logo-github-circle.svg" width="48" height=48 alt="Izzi Ink on GitHub"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/ilzekoning/" target="_blank"><img src="./img/linkedin-logo.svg" width="48" height=48 alt="Izzi Ink on LinkedIn"></a>
+                    </li>
+                </ul>
                 <ul class="container-footer ul">
                     <li>
                         Izzi Ink &middot; Solutions Architecture and Design
@@ -94,9 +104,11 @@
                     <li>
                         &#169 2023 A Member of the Houtvollop Group. All Rights Reserved.
                     </li>
+                  
                     
                 </ul>
             </footer>
+         
         </div>
        
     </div>
